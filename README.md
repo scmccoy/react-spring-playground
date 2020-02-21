@@ -15,16 +15,16 @@ You will also see any lint errors in the console.
 
 # Other libs
 
-## React Transition Group
+## [React Transition Group](https://reactcommunity.org/react-transition-group/)
 
 Transition library - changing classes on mount / unmount. 
 Lots of code for simple cases
 
-## React Motion
+## [React Motion](https://github.com/chenglou/react-motion)
 
 Complex API - uses physics based animation. 
 Not easy to get going with. render prop approach
 
-## Pose
+## [Pose](https://popmotion.io/pose/)
 
 creates components and pass props to change their state
