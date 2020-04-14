@@ -36,7 +36,7 @@ const SlideToggleContent = ({ isVisible, children, forceSlideIn }) => {
       isVisibleOnMount.current = false;
     },
     from: isVisibleOnMount.current ? visibleStyle : hiddenStyle,
-    unique: true
+    unique: true // re-use same keys
   });
 
   return transitions.map(({ item: show, props: springProps, key }) => {

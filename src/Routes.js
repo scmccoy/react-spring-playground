@@ -11,6 +11,7 @@ import Toggle from './Toggle';
 import Accordion from './Accordion';
 import AccordionTransition from './AccordionTransition';
 import ToggleTransition from './ToggleTransition';
+import Spring from './Spring';
 
 function useRouter() {
   return useContext(__RouterContext);
@@ -23,6 +24,7 @@ const Routes = () => {
         <NavLink to="/">Accordion</NavLink>
         <NavLink to="/two">Toggle transition</NavLink>
         <NavLink to="/three">Toggle</NavLink>
+        <NavLink to="/five">Spring</NavLink>
       </ul>
       <Main />
     </Router>
@@ -51,6 +53,7 @@ const Main = () => {
         <Route exact path="/two" component={Two} />
         <Route exact path="/three" component={Three} />
         <Route exact path="/acorn" component={Four} />
+        <Route exact path="/five" component={Five} />
       </Switch>
     </animated.div>
   ));
@@ -80,7 +83,7 @@ const Two = () => {
 };
 const Three = () => {
   return (
-    <div className="page-route three">
+    <div className="page-route million">
       <Toggle /> 
     </div>
   );
@@ -92,7 +95,12 @@ const Four = () => {
     </div>
   );
 };
-
-
+const Five = () => {
+  return (
+    <div className="page-route three">
+      <Spring /> 
+    </div>
+  );
+};
 
 export default Routes;

@@ -10,13 +10,15 @@ const Toggle = () => {
     const [isToggled, setToggle ] = useState(false);
     
     const fade = useSpring({
+        color: isToggled ? 'red' : '#fff',
         opacity: isToggled ? 1 : 0,
         fontSize: isToggled ? '3rem' : '2rem',
     })
     const rotate = useSpring({
+        color: isToggled ? 'blue' : '#000',
         fontSize: isToggled ? '3rem' : '2rem',
         transform: isToggled ? 'rotate(180deg)' : 'rotate(0deg)'
-    })
+    })    
 
     return (
         <div>
@@ -31,7 +33,7 @@ const Toggle = () => {
 //     const {color, changingValue, textDecoration} = useSpring({
 //         // opacity: isToggled ? 1 : 0,
 //         // fontSize: isToggled ? '3rem' : '2rem',
-//         color: isToggled ? 'red' : '#fff',
+//         color: isToggled ? 'red' : '#82d8d8',
 //         changingValue: isToggled ? 0 : 1,
 //         textDecoration: isToggled ? 'wavy' : 'dotted'
 //     })

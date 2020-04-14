@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTransition, animated } from 'react-spring';
+import { useTransition, animated, config } from 'react-spring';
 
 /* 
     Using Transitions
@@ -12,7 +12,8 @@ const ToggleTransition = () => {
     const transition = useTransition(isToggled, isToggled, {
         from: {opacity: 0, position: 'absolute'},
         enter: {opacity: 1},
-        leave: {opacity: 0}
+        leave: {opacity: 0},
+        // config: {mass: 99, tension: 220, friction: 180}
     })
 
     return (
